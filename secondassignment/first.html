@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Function to check if the year is a leap year
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Take user input
+let year = prompt("Enter a year:");
+
+// Convert the input to a number
+year = parseInt(year);
+
+// Check if the input is a valid year
+if (isNaN(year) || year <= 0) {
+    alert("Please enter a valid year.");
+} else {
+    // Check if the entered year is a leap year and display the result
+    if (isLeapYear(year)) {
+        alert(year + " is a leap year.");
+    } else {
+        alert(year + " is not a leap year.");
+    }
+}
+</script>
+</body>
+</html>
